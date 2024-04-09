@@ -1,10 +1,12 @@
-const timeLeftdisplay = querySelector('#time-left');
-const resultDisplay = querySelector('#result');
-const startPauseButton = querySelector('#start-pause-button');
+const timeLeftdisplay = document.querySelector('#time-left');
+const resultDisplay = document.querySelector('#result');
+const startPauseButton = document.querySelector('#start-pause-button');
 const squares = document.querySelectorAll(".grid div")
 
+console.log(squares)
+let currentIndex = 0;
 function moveFrog() {
-    console.log('moved')
-    
+   
+    squares[currentIndex].classList.add('frog')
 }
 document.addEventListener('keyup', moveFrog)
