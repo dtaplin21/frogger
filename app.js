@@ -19,7 +19,7 @@ console.log(e)
             break
         case 'ArrowRight' :
             console.log('move right')
-            if(currentIndex % width !== 9) currentIndex += 1
+            if(currentIndex % width < width - 1) currentIndex += 1
             currentIndex += 1
             break
         case 'ArrowUp' :
@@ -35,3 +35,8 @@ console.log(e)
     squares[currentIndex].classList.add('frog')
 }
 document.addEventListener('keyup', moveFrog)
+
+function cars() {
+    let car = document.createElement('div')
+
+}
