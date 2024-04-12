@@ -2,6 +2,7 @@ const timeLeftdisplay = document.querySelector('#time-left');
 const resultDisplay = document.querySelector('#result');
 const startPauseButton = document.querySelector('#start-pause-button');
 const squares = document.querySelectorAll(".grid div")
+const logsLeft = document.querySelectorAll('.log-left')
 
 console.log(squares)
 let currentIndex = 76;
@@ -35,3 +36,12 @@ console.log(e)
 }
 document.addEventListener('keyup', moveFrog)
 
+function autoMoveLogs() {
+    logsLeft.forEach(logLeft => moveLogLeft(logLeft))
+}
+
+function moveLogLeft() {
+    switch(true) {
+        case logsLeft.classList.contains('l1')
+    }
+}
