@@ -5,7 +5,7 @@ const squares = document.querySelectorAll(".grid div")
 
 console.log(squares)
 let currentIndex = 76;
-let width = 9;
+const width = 9;
 
 
 function moveFrog(e) {
@@ -20,15 +20,14 @@ console.log(e)
         case 'ArrowRight' :
             console.log('move right')
             if(currentIndex % width < width - 1) currentIndex += 1
-            currentIndex += 1
             break
         case 'ArrowUp' :
             console.log('move up')
-            currentIndex -= width
+            if(currentIndex - width >=0 ) currentIndex -= width
             break
         case 'ArrowDown' :
             console.log('move down');
-            currentIndex += width
+           if(currentIndex + width < width * width) currentIndex += width
             break 
     }
    
@@ -36,7 +35,3 @@ console.log(e)
 }
 document.addEventListener('keyup', moveFrog)
 
-function cars() {
-    let car = document.createElement('div')
-
-}
