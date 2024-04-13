@@ -40,8 +40,33 @@ function autoMoveLogs() {
     logsLeft.forEach(logLeft => moveLogLeft(logLeft))
 }
 
-function moveLogLeft() {
+
+
+function moveLogLeft(logsLeft) {
     switch(true) {
-        case logsLeft.classList.contains('l1')
+        case logsLeft.classList.contains('l1') :
+            logsLeft.classList.remove('l1')
+            logsLeft.classList.add('l2')
+            break
+        case logsLeft.classList.contains('l2') :
+                logsLeft.classList.remove('l2')
+                logsLeft.classList.add('l3')
+                break
+        case logsLeft.classList.contains('l3') :
+            logsLeft.classList.remove('l3')
+            logsLeft.classList.add('l4')
+            break
+         case   logsLeft.classList.contains('l4') :
+            logsLeft.classList.remove('l4')
+            logsLeft.classList.add('l5')
+            break
+            case   logsLeft.classList.contains('l5') :
+                logsLeft.classList.remove('l5')
+                logsLeft.classList.add('l1')
+                break
     }
 }
+
+
+
+setInterval(autoMoveLogs, 1000)
