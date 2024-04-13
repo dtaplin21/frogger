@@ -4,6 +4,7 @@ const startPauseButton = document.querySelector('#start-pause-button');
 const squares = document.querySelectorAll(".grid div")
 const logsLeft = document.querySelectorAll('.log-left')
 const logsRight = document.querySelectorAll('.log-right')
+const carsLeft = document.querySelectorAll('cars-left')
 
 console.log(squares)
 let currentIndex = 76;
@@ -53,19 +54,19 @@ function moveLogLeft(logsLeft) {
         case logsLeft.classList.contains('l2') :
                 logsLeft.classList.remove('l2')
                 logsLeft.classList.add('l3')
-                break
+            break
         case logsLeft.classList.contains('l3') :
             logsLeft.classList.remove('l3')
             logsLeft.classList.add('l4')
             break
-         case   logsLeft.classList.contains('l4') :
+         case logsLeft.classList.contains('l4') :
             logsLeft.classList.remove('l4')
             logsLeft.classList.add('l5')
             break
-            case   logsLeft.classList.contains('l5') :
-                logsLeft.classList.remove('l5')
-                logsLeft.classList.add('l1')
-                break
+        case logsLeft.classList.contains('l5') :
+            logsLeft.classList.remove('l5')
+            logsLeft.classList.add('l1')
+            break
     }
 }
 
